@@ -29,8 +29,8 @@ public class UserDetails {
         lastName = propertiesReader.getProperty("UserInfo", "lastName");
         email = propertiesReader.getProperty("UserInfo", "email");
         mobileNo = propertiesReader.getProperty("UserInfo", "mobileNo");
-         password =propertiesReader.getProperty("UserInfo", "password");
-       Country = propertiesReader.getProperty("UserInfo", "country");
+        password =propertiesReader.getProperty("UserInfo", "password");
+        Country = propertiesReader.getProperty("UserInfo", "country");
         Country2 = propertiesReader.getProperty("UserInfo", "country2");
         Address1 = propertiesReader.getProperty("UserInfo", "Address1");
         Address2 = propertiesReader.getProperty("UserInfo", "Address2");
