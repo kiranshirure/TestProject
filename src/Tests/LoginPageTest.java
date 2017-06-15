@@ -38,9 +38,9 @@ public class LoginPageTest extends AbstractTest {
 //        wait.until(ExpectedConditions.elementToBeClickable(driver.getTitle())));
         //  Assert.assertEquals("Dashboard", driver.getTitle());
         //Actions builder = new Actions(driver);
-        driver.findElement(By.linkText("Accounts")).click();
+        driver.findElement(By.cssSelector("#social-sidebar-menu > li:nth-of-type(4) > a > span")).click();
        // builder.moveToElement(driver.findElement(By.linkText("Accounts"))).build().perform();
-        driver.findElement(By.linkText("Admins")).click();
+        driver.findElement(By.cssSelector("#Accounts > li:nth-of-type(1) > a")).click();
         driver.findElement(By.className("add_button")).click();
 
         FillDetails fd = new FillDetails(driver).get();

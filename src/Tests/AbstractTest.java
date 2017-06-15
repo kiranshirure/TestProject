@@ -36,9 +36,9 @@ import java.util.concurrent.TimeUnit;
             driver.navigate().refresh();
         }
 
-//        @AfterClass
-//        public static void tearDown() throws Exception {
-//            driver.close();
-//            driver.quit();
-//        }
+        @AfterClass
+        public static void tearDown() throws Exception {
+            driver.close();
+            driver.quit();
+        }
     }

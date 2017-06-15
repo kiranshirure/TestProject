@@ -83,17 +83,17 @@ public class UserDetails {
     }
 
     public String getAddress1() {
-        return password;
+        return Address1;
     }
     public void setAddress1(String password) {
-        this.password = password;
+        this.Address1 = password;
     }
 
     public String getAddress2() {
-        return password;
+        return Address2;
     }
-    public void setAddress2(String password) {
-        this.password = password;
+    public void setAddress2(String Address2) {
+        this.Address2 = Address2;
     }
 
     public static UserDetails getUserDetails() {

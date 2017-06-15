@@ -4,10 +4,7 @@ package Pages;
 import Beans.UserDetails;
 import Utils.propertiesReader;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.LoadableComponent;
 import org.openqa.selenium.support.ui.Select;
 
@@ -23,11 +20,9 @@ public class FillDetails extends LoadableComponent<FillDetails> {
     By email = By.name("email");
     By mobilenumber = By.name("mobile");
     By password = By.name("password");
-    By country = By.id("select2-drop-mask");
-    By country2 = By.className("select2-input");
-    By SelectedCountry = By.className("select2-match");
+    By country = By.name("country");
     By address1 = By.name("address1");
-    By address2 = By.name("address3");
+    By address2 = By.name("address2");
 
 
 
@@ -59,16 +54,16 @@ public class FillDetails extends LoadableComponent<FillDetails> {
         driver.findElement(email).sendKeys(ud.getEmail());
         driver.findElement(password).sendKeys(ud.getPassword());
        driver.findElement(mobilenumber).sendKeys(ud.getMobileNo());
-//       driver.findElement(country).click();
-//       driver.findElement(country2).sendKeys(ud.getCountry2());
-//       driver.findElement(SelectedCountry).equals(country2);
-        WebElement droplist = driver.findElement(By.className("select2-drop-mask"));
-        droplist.sendKeys("India");
 
-       // List<WebElement> allOptions = droplist.findElements(By.tagName("option"));
+         Select dropdown = new Select(driver.findElement(country));
+        dropdown.selectByValue(ud.getCountry());
 
         driver.findElement(address1).sendKeys(ud.getAddress1());
         driver.findElement(address2).sendKeys(ud.getAddress2());
+
+        driver.findElement(By.xpath("//*[@id='content']/form/div/div[2]/div/div[17]/div[1]/div/div[2]/ul/li[3]/label/div/ins")).click();
+
+         driver.findElement(By.xpath("//*[@id='content']/form/div/div[3]/button")).click();
 
     }
 
